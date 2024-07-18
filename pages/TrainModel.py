@@ -8,23 +8,8 @@ import numpy as np
 from pyproj import Proj, transform
 from pathlib import Path
 import pickle
-import folium
-from sklearn.model_selection import train_test_split
-import streamlit.components.v1 as components
-import json
-import numpy as np
-import base64
+
 import io, time
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.neural_network import MLPRegressor
-from keras.models import Sequential
-from keras.layers import Dense, Activation
-from keras.optimizers import Adam
-import tensorflow as tf
-from keras.utils import get_custom_objects
-from keras import regularizers
-from keras import backend as K
-from keras.models import load_model
 from sklearn.metrics import mean_squared_error
 
 # Page configuration
