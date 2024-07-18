@@ -36,8 +36,6 @@ error1 =pd.read_csv('data/aff_errorCass.csv')
 scaler_utm_to_cass_T.fit(pd.read_csv('data/utmTrain.csv', delimiter=',', usecols=['E', 'N']))
 scaler_utm_to_cass_L.fit(error1)
 # Load Cassini to UTM model
-
-
 # Load parameters and scaler for Cassini to UTM transformation
 params_utm = pd.read_csv('data/paramsUC.csv', header=None).to_numpy()
 scaler_cass_to_utm_T = MinMaxScaler()
