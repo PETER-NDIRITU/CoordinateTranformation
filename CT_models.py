@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 from pyproj import Proj, transform
 from pathlib import Path
-
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 from keras.models import load_model
 import folium
