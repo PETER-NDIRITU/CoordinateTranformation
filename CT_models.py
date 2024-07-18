@@ -17,33 +17,33 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 #loaded_model = load_model()
 # loading the saved model
-cass_to_utm_model = load_model('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/UCassToUtm_model.keras')
+cass_to_utm_model = load_model('data/UCassToUtm_model.keras')
 #load training data
-data = pd.read_csv('C:/Users/HP/ml/streamlit/data/utmTrain.csv',delimiter=',', 
+data = pd.read_csv('data/utmTrain.csv',delimiter=',', 
                    usecols=['name', 'E', 'N'], encoding='ISO-8859-1') 
 data = data.dropna()
 data.columns= ['name', 'Easting','Northing']
 
 
 # Load UTM to Cassini model
-utm_to_cass_model = load_model('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/UtmToCass_model.keras')
+utm_to_cass_model = load_model('data/UtmToCass_model.keras')
 
 # Load parameters and scaler for UTM to Cassini transformation
-params_cass = pd.read_csv('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/paramsCass.csv', header=None).to_numpy()
+params_cass = pd.read_csv('data/paramsCass.csv', header=None).to_numpy()
 scaler_utm_to_cass_T = MinMaxScaler()
 scaler_utm_to_cass_L = MinMaxScaler()
-error1 =pd.read_csv('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/aff_errorCass.csv') 
-scaler_utm_to_cass_T.fit(pd.read_csv('C:/Users/HP/ml/streamlit/data/utmTrain.csv', delimiter=',', usecols=['E', 'N']))
+error1 =pd.read_csv('data/aff_errorCass.csv') 
+scaler_utm_to_cass_T.fit(pd.read_csv('data/utmTrain.csv', delimiter=',', usecols=['E', 'N']))
 scaler_utm_to_cass_L.fit(error1)
 # Load Cassini to UTM model
 
 
 # Load parameters and scaler for Cassini to UTM transformation
-params_utm = pd.read_csv('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/paramsUC.csv', header=None).to_numpy()
+params_utm = pd.read_csv('data/paramsUC.csv', header=None).to_numpy()
 scaler_cass_to_utm_T = MinMaxScaler()
-error2 = pd.read_csv('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/aff_errorUtm.csv')
+error2 = pd.read_csv('data/aff_errorUtm.csv')
 scaler_cass_to_utm_L = MinMaxScaler()
-scaler_cass_to_utm_T.fit(pd.read_csv('C:/Users/HP/musaML/labscripts/labscripts/PROJECT/msc/data/cassTrain.csv'))
+scaler_cass_to_utm_T.fit(pd.read_csv('data/cassTrain.csv'))
 
 scaler_cass_to_utm_L.fit(error2)
 
