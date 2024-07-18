@@ -53,7 +53,7 @@ st.sidebar.markdown(
     """
     )
 
-data = pd.read_csv('C:/Users/HP/ml/streamlit/data/utmTrain.csv',delimiter=',', 
+data = pd.read_csv('data/utmTrain.csv',delimiter=',', 
                    usecols=['name', 'E', 'N'], encoding='ISO-8859-1') 
 data = data.dropna()
 data.columns= ['name', 'Easting','Northing']
