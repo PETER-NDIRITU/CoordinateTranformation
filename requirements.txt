@@ -6,5 +6,5 @@ pyproj
 pathlib
 folium
 scikit-learn
-keras
-tensorflow
+keras==2.6.0
+tensorflow==2.6.0
