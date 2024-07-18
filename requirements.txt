@@ -1,7 +1,7 @@
 pandas
 streamlit
 leafmap
-numpy
+numpy==2.0.0
 pyproj
 pathlib
 folium
