@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 #loaded_model = load_model()
 # loading the saved model
-cass_to_utm_model = load_model('data/UCassToUtm_model.keras')
+cass_to_utm_model = load_model("data/model.keras")
 #load training data
 data = pd.read_csv('data/utmTrain.csv',delimiter=',', 
                    usecols=['name', 'E', 'N'], encoding='ISO-8859-1') 
