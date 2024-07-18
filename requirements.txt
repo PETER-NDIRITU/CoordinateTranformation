@@ -5,6 +5,6 @@ numpy
 pyproj
 pathlib
 folium
-sklearn
+scikit-learn
 keras
 tensorflow
