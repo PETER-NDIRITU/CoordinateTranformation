@@ -2,34 +2,16 @@
 """
 Created on Thu Jan 18 11:35:36 2024
 
-@author: HP
+@author: HP -moses
 """
-import json
 import pandas as pd
 import numpy as np
 from pyproj import Proj, transform
 from pathlib import Path
-import pickle
-#import streamlit_authenticator as stauth
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.preprocessing import StandardScaler,MinMaxScaler,LabelEncoder
-from sklearn.pipeline import Pipeline
+
 from sklearn.metrics import mean_squared_error
 from keras.models import load_model
 import folium
-
-import io, time
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.neural_network import MLPRegressor
-from keras.models import Sequential
-from keras.layers import Dense, Activation
-from keras.optimizers import Adam
-import tensorflow as tf
-from keras.utils import get_custom_objects
-from keras import regularizers
-from keras import backend as K
-from keras.models import load_model
-from sklearn.metrics import mean_squared_error
 
 from sklearn.model_selection import train_test_split
 import pandas as pd
