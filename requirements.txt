@@ -7,3 +7,4 @@ pathlib
 folium
 scikit-learn
 keras
+tensorflow
