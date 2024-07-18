@@ -26,7 +26,7 @@ data.columns= ['name', 'Easting','Northing']
 
 
 # Load UTM to Cassini model
-utm_to_cass_model = load_model('data/UtmToCass_model.keras')
+utm_to_cass_model = load_model('data/Utmodel.keras')
 
 # Load parameters and scaler for UTM to Cassini transformation
 params_cass = pd.read_csv('data/paramsCass.csv', header=None).to_numpy()
