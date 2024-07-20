@@ -13,6 +13,13 @@ from sklearn.metrics import mean_squared_error
 from keras.models import load_model
 import folium
 
+import io, time
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.neural_network import MLPRegressor
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import Adam
+
 from sklearn.model_selection import train_test_split
 import pandas as pd
 #loaded_model = load_model()
