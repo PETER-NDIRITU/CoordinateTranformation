@@ -208,9 +208,9 @@ with col2:
                      
                         col1,col2 = st.columns(2)
                         with col1:
-                            st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Training RMSE MLR_AFFINE: {train_rmse:.2f}"}</h1>', unsafe_allow_html=True)
+                            st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Training RMSE: {train_rmse:.2f}"}</h1>', unsafe_allow_html=True)
                         with col2:
-                            st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Testing RMSE MLR_AFFINE: {test_rmse:.2f}"}</h1>', unsafe_allow_html=True)
+                            st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Testing RMSE: {test_rmse:.2f}"}</h1>', unsafe_allow_html=True)
     
                         # Convert the DataFrame to CSV
                         csv = transf_coord.to_csv(index=False)
@@ -225,7 +225,7 @@ with col2:
                         col1, col2,col3 = st.columns([2,1.5,3])  
                         with col1:
                             st.download_button( 
-                                        label="Affine Parameters",
+                                        label="Parameters",
                                         data=csv1,
                                         file_name=csv_file_name,
                                         mime="text/csv",
@@ -247,7 +247,7 @@ with col2:
                         
                                 # Save and download the model
                             buffer = save_ann_model(neural_network_model)
-                            st.download_button(label="Trained ANN-FFINE Model", 
+                            st.download_button(label="Trained Model", 
                                                data=buffer, file_name="ann_model.pkl", 
                                                mime="application/octet-stream")
     
@@ -452,9 +452,9 @@ with col2:
                           csv = csv.to_csv(index=False)
                           col1,col2 = st.columns(2)
                           with col1:
-                                st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Training RMSE MLR_AFFINE: {train_rmse:.2f}"}</h1>', unsafe_allow_html=True)
+                                st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Training RMSE: {train_rmse:.2f}"}</h1>', unsafe_allow_html=True)
                           with col2:
-                                st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Testing RMSE MLR_AFFINE: {test_rmse:.2f}"}</h1>', unsafe_allow_html=True)
+                                st.markdown(f'<h1 style="color:#FF33E9;font-size:18px;">{f"Testing RMSE: {test_rmse:.2f}"}</h1>', unsafe_allow_html=True)
 ####
                             # Convert the DataFrame to CSV
                           csv = transf_coord.to_csv(index=False)
@@ -488,7 +488,7 @@ with col2:
                           
                                   # Save and download the model
                               buffer = save_ann_model(neural_network_model)
-                              st.download_button(label=" Trained MLR-AFFINE Model", 
+                              st.download_button(label=" Trained Model", 
                                                  data=buffer, file_name="ann_model.pkl", 
                                                  mime="application/octet-stream")
                  
