@@ -75,12 +75,12 @@ with col2:
                 zone_number= st.selectbox("**UTM Zone**",
                                 zone_vals, index = default_ix )
             col1, col2 = st.columns([2,2])
-            with col3:
+            with col1:
                 letter_vals = ['M','N', 'O']
                 default_id = letter_vals.index('M')
                 zone_letter = st.selectbox("**Zone letter**",
                                 letter_vals, index = default_id)
-            with col4:
+            with col2:
                 show_map= st.radio("Show on Map", ('No','Yes'))  
                             
             name= st.selectbox("Select Points ID/ Name",
