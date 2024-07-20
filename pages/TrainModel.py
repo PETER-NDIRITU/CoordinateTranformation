@@ -66,7 +66,7 @@ with col2:
                     </style>
                     """, unsafe_allow_html=True)
     
-            col1, col2, col3,col4 = st.columns([1.9,1.5,1.5,1.5])  
+            col1, col2 = st.columns([3,2])  
             with col1:
                 transformation_type = st.radio("**Transformation Type**", ('UTM to Cassini', 'Cassini to UTM'))
             with col2:
@@ -74,6 +74,7 @@ with col2:
                 default_ix = zone_vals.index(37)
                 zone_number= st.selectbox("**UTM Zone**",
                                 zone_vals, index = default_ix )
+            col1, col2 = st.columns([2,2])
             with col3:
                 letter_vals = ['M','N', 'O']
                 default_id = letter_vals.index('M')
