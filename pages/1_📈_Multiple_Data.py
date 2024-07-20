@@ -38,7 +38,7 @@ zone_number = 37
 zone_letter ='M'
 #df =app1.data
 #st.dataframe(df, use_container_width=True)
-col1, col2 =st.columns([4,2])
+col1, col2 =st.columns([3.5,2])
 
 with col2:
     # Main function to handle form submission
